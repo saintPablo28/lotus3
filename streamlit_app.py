@@ -39,10 +39,9 @@ with st.echo(code_location='below'):
     
     
 """
-# Lotus 3
+# Built in Collaboration with IBM Corporation and Palantir Inc.
 
 
-Teacher Dashboard
+© Ye Institute for Innovators 2022 
 
-Student Responses
 """
