@@ -39,7 +39,7 @@ with st.echo(code_location='below'):
     
     
 """
-# Built in Collaboration with IBM Corporation and Palantir Inc.
+## Built in Collaboration with IBM Corporation and Palantir Inc.
 
 
 © Ye Institute for Innovators 2022 
