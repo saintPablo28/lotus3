@@ -7,7 +7,6 @@ import streamlit as st
 """
 # Lotus 3
 
-Built in collabaration with  © IBM Corporation and Palantir Inc.
 
 Teacher Dashboard
 
@@ -35,3 +34,8 @@ with st.echo(code_location='below'):
     st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
+
+    
+ """
+ Built in collabaration with  IBM Corporation and Palantir Inc
+ """
