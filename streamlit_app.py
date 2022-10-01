@@ -39,7 +39,15 @@ with st.echo(code_location='below'):
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
     
-     
+
+st.write("Average Class Correct Response Rate:")
+chart_data = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
+
+st.line_chart(chart_data)
+    
+    
 st.write("Raw Student Response Data")
 dataframe = pd.DataFrame(
     np.random.randn(10, 20),
