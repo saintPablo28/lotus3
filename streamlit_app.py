@@ -5,14 +5,13 @@ import pandas as pd
 import streamlit as st
 
 """
-# Welcome to Streamlit!
+# Lotus 3
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
+Built in collabaration with  © IBM Corporation and Palantir Inc.
 
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+Teacher Dashboard
 
-In the meantime, below is an example of what you can do with just a few lines of code:
+Student Responses
 """
 
 
