@@ -63,11 +63,9 @@ chart_data = pd.DataFrame(
 st.line_chart(chart_data)
     
     
-st.write("Raw Student Response Data")
-dataframe = pd.DataFrame(
-    np.random.randn(10, 20),
-    columns=('col %d' % i for i in range(20)))
-st.table(dataframe)
+st.write("Core Issues and Knowledge Gaps using ML Tree Regressors")
+dataframe = pd.read_csv("mlinsight.csv")
+st.write(dataframe)
 
 
 
