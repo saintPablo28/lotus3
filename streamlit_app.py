@@ -22,6 +22,14 @@ Teacher Dashboard
 total_points = st.slider("Number of AI Practice Questions", 1, 5000, 2000)
 num_turns = st.slider("Difficulty of Practice Set", 1, 100, 9)
 
+"""
+Progression of practice questions on difficulty index [0.0-2.0]
+
+
+"""
+
+
+
 Point = namedtuple('Point', 'x y')
 data = []
 
