@@ -18,27 +18,27 @@ Teacher Dashboard
 
 
 
-with st.echo(code_location='below'):
-    total_points = st.slider("Number of AI Practice Questions", 1, 5000, 2000)
-    num_turns = st.slider("Difficulty of Practice Set", 1, 100, 9)
 
-    Point = namedtuple('Point', 'x y')
-    data = []
+total_points = st.slider("Number of AI Practice Questions", 1, 5000, 2000)
+num_turns = st.slider("Difficulty of Practice Set", 1, 100, 9)
 
-    points_per_turn = total_points / num_turns
+Point = namedtuple('Point', 'x y')
+data = []
 
-    for curr_point_num in range(total_points):
-        curr_turn, i = divmod(curr_point_num, points_per_turn)
-        angle = (curr_turn + 1) * 2 * 2 * i / points_per_turn
-        radius = curr_point_num / total_points
-        x = radius * np.random.randint(1,3)
-        y = radius * np.random.randint(1,3)
-        data.append(Point(x, y))
+points_per_turn = total_points / num_turns
 
-    st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
-        .mark_circle(color='#0068c9', opacity=0.5)
-        .encode(x='x:Q', y='y:Q'))
-    
+for curr_point_num in range(total_points):
+    curr_turn, i = divmod(curr_point_num, points_per_turn)
+    angle = (curr_turn + 1) * 2 * 2 * i / points_per_turn
+    radius = curr_point_num / total_points
+    x = radius * np.random.randint(1,3)
+    y = radius * np.random.randint(1,3)
+    data.append(Point(x, y))
+
+st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
+    .mark_circle(color='#0068c9', opacity=0.5)
+    .encode(x='x:Q', y='y:Q'))
+
 
 st.write("Average Class Correct Response Rate:")
 chart_data = pd.DataFrame(
