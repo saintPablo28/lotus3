@@ -5,6 +5,12 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 
+
+from PIL import Image
+image = Image.open('lotus.png')
+
+st.image(image)
+
 """
 # Lotus 3
 
@@ -13,6 +19,7 @@ Teacher Dashboard
 
 
 """
+
 
 
 
@@ -51,7 +58,7 @@ st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
 st.write("Average Class Correct Response Rate:")
 chart_data = pd.DataFrame(
      np.random.randn(20, 3),
-     columns=['a', 'b', 'c'])
+     columns=['Science ', 'Mathematics', 'Rhetorical Analysis'])
 
 st.line_chart(chart_data)
     
@@ -59,7 +66,7 @@ st.line_chart(chart_data)
 st.write("Raw Student Response Data")
 dataframe = pd.DataFrame(
     np.random.randn(10, 20),
-    columns=('col %d' % i for i in range(20)))
+    columns=('col %d' % i for i in range(1)))
 st.table(dataframe)
 
 
